@@ -8,9 +8,53 @@ export function useAvailableProducts() {
   return useQuery<AvailableProduct[], AxiosError>(
     "available-products",
     async () => {
-      const res = await axios.get<AvailableProduct[]>(
-        `${API_PATHS.bff}/product/available`
-      );
+      const res = await axios
+        .get<AvailableProduct[]>(`${API_PATHS.bff}/product/available/fail`)
+        .catch((error) => {
+          console.error(
+            "Error during load products, enablinng mock data",
+            error
+          );
+          return {
+            data: [
+              {
+                description: "2.0 TDI FWD",
+                id: "7567ec4b-b10c-48c5-9345-fc73c48a80aa",
+                price: 24,
+                title: "Ford Mondeo",
+                count: 1,
+              },
+              {
+                description: "3.0 TDI 4Motion",
+                id: "7567ec4b-b10c-48c5-9345-fc73c48a80a1",
+                price: 15,
+                title: "Volksvagen Touareg",
+                count: 2,
+              },
+              {
+                description: "1.8 VTEC FWD",
+                id: "7567ec4b-b10c-48c5-9345-fc73c48a80a3",
+                price: 23,
+                title: "Honda Civic",
+                count: 3,
+              },
+              {
+                description: "325 RWD",
+                id: "7567ec4b-b10c-48c5-9345-fc73348a80a1",
+                price: 15,
+                title: "BMW 3",
+                count: 4,
+              },
+              {
+                description: "3.5 VQ35 4WD",
+                id: "7567ec4b-b10c-48c5-9445-fc73c48a80a2",
+                price: 23,
+                title: "Infiniti FX35",
+                count: 5,
+              },
+            ] as AvailableProduct[],
+          };
+        });
       return res.data;
     }
   );
