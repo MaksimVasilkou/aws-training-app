@@ -1,3 +1,14 @@
+Cloudfront URL: https://d17rbvja6as776.cloudfront.net/ 
+S3 Url: http://my-new-used-cars-shop-app.s3-website-us-east-1.amazonaws.com/
+
+PR task 2: https://github.com/MaksimVasilkou/aws-training-app/pull/3
+
+
+
+
+
+
+
 # React-shop-cloudfront
 
 This is frontend starter project for nodejs-aws mentoring program. It uses the following technologies:
