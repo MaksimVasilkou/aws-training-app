@@ -14,6 +14,7 @@ export default function Products() {
   if (isLoading) {
     return <Typography>Loading...</Typography>;
   }
+  console.log(data);
 
   return (
     <Grid container spacing={4}>
