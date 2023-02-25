@@ -5,40 +5,34 @@ import { AvailableProduct, Product } from "~/models/Product";
 
 export const products: Product[] = [
   {
-    description: "Short Product Description1",
+    description: "2.0 TDI FWD",
     id: "7567ec4b-b10c-48c5-9345-fc73c48a80aa",
     price: 24,
-    title: "ProductOne",
+    title: "Ford Mondeo",
   },
   {
-    description: "Short Product Description7",
+    description: "3.0 TDI 4Motion",
     id: "7567ec4b-b10c-48c5-9345-fc73c48a80a1",
     price: 15,
-    title: "ProductTitle",
+    title: "Volksvagen Touareg",
   },
   {
-    description: "Short Product Description2",
+    description: "1.8 VTEC FWD",
     id: "7567ec4b-b10c-48c5-9345-fc73c48a80a3",
     price: 23,
-    title: "Product",
+    title: "Honda Civic",
   },
   {
-    description: "Short Product Description4",
+    description: "325 RWD",
     id: "7567ec4b-b10c-48c5-9345-fc73348a80a1",
     price: 15,
-    title: "ProductTest",
+    title: "BMW 3",
   },
   {
-    description: "Short Product Descriptio1",
+    description: "3.5 VQ35 4WD",
     id: "7567ec4b-b10c-48c5-9445-fc73c48a80a2",
     price: 23,
-    title: "Product2",
-  },
-  {
-    description: "Short Product Description7",
-    id: "7567ec4b-b10c-45c5-9345-fc73c48a80a1",
-    price: 15,
-    title: "ProductName",
+    title: "Infiniti FX35",
   },
 ];
 
