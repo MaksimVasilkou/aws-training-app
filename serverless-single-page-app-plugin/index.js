@@ -89,6 +89,7 @@ class ServerlessPlugin {
     );
 
     const outputs = result.Stacks[0].Outputs;
+    this.serverless.cli.log(`Outputs ==: ${JSON.stringify(outputs)}`);
     const output = outputs.find(
       entry => entry.OutputKey === 'WebAppCloudFrontDistributionOutput',
     );

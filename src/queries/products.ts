@@ -46,6 +46,19 @@ export function useAvailableProduct(id?: string) {
   );
 }
 
+export function useSingleProduct(id?: string) {
+  return useQuery<AvailableProduct, AxiosError>(
+    ["product", { id }],
+    async () => {
+      const res = await axios.get<AvailableProduct>(
+        `${API_PATHS.bff}/products/${id}`
+      );
+      return res.data;
+    },
+    { enabled: !!id }
+  );
+}
+
 export function useRemoveProductCache() {
   const queryClient = useQueryClient();
   return React.useCallback(
