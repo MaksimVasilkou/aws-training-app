@@ -31,17 +31,17 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
       method: "GET",
       url,
       params: {
-        name: encodeURIComponent(file.name),
+        name: encodeURIComponent(file ? file.name : "noNameProvided"),
       },
     });
-    console.log("File to upload: ", file.name);
+    console.log("File to upload: ", file ? file.name : "noNameProvided");
     console.log("Uploading to: ", response.data);
     const result = await fetch(response.data, {
       method: "PUT",
       body: file,
     });
     console.log("Result: ", result);
-    setFile("");
+    setFile(undefined);
   };
   return (
     <Box>
