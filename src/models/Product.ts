@@ -7,6 +7,11 @@ export const ProductSchema = Yup.object({
   price: Yup.number().positive().required().defined().default(0),
 });
 
+export const CountSchema = ProductSchema.shape({
+  product_id: Yup.string(),
+  count: Yup.number().integer().min(0).required().defined().default(0),
+});
+
 export const AvailableProductSchema = ProductSchema.shape({
   count: Yup.number().integer().min(0).required().defined().default(0),
 });

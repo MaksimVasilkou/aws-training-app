@@ -4,6 +4,7 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs18.x
+  region: eu-west-1
 
 
 plugins:
@@ -19,9 +20,6 @@ custom:
   ## Serverless-single-page-app-plugin configuration:
   s3LocalPath: ${self:custom.client.distributionFolder}/
   s3BucketName: ${self:custom.client.bucketName}
-functions:
-  function1:
-    handler: index.handler
 
 resources:
   Resources:
