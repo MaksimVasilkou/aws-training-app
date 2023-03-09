@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "~/components/MainLayout/MainLayout";
 import PageProductForm from "~/components/pages/PageProductForm/PageProductForm";
+import PageProduct from "~/components/pages/PageProduct/PageProduct";
 import PageOrders from "~/components/pages/PageOrders/PageOrders";
 import PageOrder from "~/components/pages/PageOrder/PageOrder";
 import PageProductImport from "~/components/pages/admin/PageProductImport/PageProductImport";
@@ -13,6 +14,9 @@ function App() {
     <MainLayout>
       <Routes>
         <Route path="/" element={<PageProducts />} />
+        <Route path="/product">
+          <Route path=":id" element={<PageProduct />} />
+        </Route>
         <Route path="cart" element={<PageCart />} />
         <Route path="admin/orders">
           <Route index element={<PageOrders />} />
